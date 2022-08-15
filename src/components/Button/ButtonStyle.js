@@ -7,6 +7,7 @@ export const BtnDiv = styled.button`
   gap: 5px;
   border: none;
   padding: 5px 15px;
+  height: ${({ height }) => (height ? height : "45px")};
   color: #fff;
   background: #46a358;
   border-radius: 6px;

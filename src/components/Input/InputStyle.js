@@ -4,25 +4,38 @@ export const InputDiv = styled.div`
   transform: scale(1);
   transition: all 0.3s ease;
   margin: 20px 0;
+  width: 100%;
 `;
 
 export const MainInput = styled.input`
   outline: none;
-  border: 2px solid #757575;
+  border: none;
   padding: 4px 10px;
-  background: #ffffff;
+  background: #f8f8f8;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
   border-radius: 6px;
+  height: ${({ height }) => (height ? height : "45px")};
+  width: 100%;
 
   :focus {
     border: 2px solid #46a358;
+  }
+
+  @media (max-width: 820px) {
+    padding-left: 40px;
+  }
+
+  @media (max-width: 390px) {
+    width: 100%;
+    font-size: 14px;
+    padding: 5px 0px 5px 35px;
   }
 `;
 
 export const EmaiInput = styled.input`
   outline: none;
   border: none;
-  padding: 10px 10px;
+  padding: 10px;
   background: #ffffff;
   border-radius: 6px;
   width: ${({ width }) => (width ? width : "")};
@@ -32,5 +45,14 @@ export const EmaiInput = styled.input`
 
   :focus {
     border: 2px solid #46a358;
+  }
+
+  @media (max-width: 540px) {
+    width: 330px;
+  }
+
+  @media (max-width: 440px) {
+    width: 280px;
+    font-size: 16px;
   }
 `;

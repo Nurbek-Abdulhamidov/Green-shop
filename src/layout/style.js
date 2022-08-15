@@ -5,6 +5,7 @@ export const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
   border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
 `;
 
@@ -12,6 +13,10 @@ export const Nav = styled.nav``;
 
 export const NavLogo = styled.div`
   cursor: pointer;
+
+  @media (max-width: 680px) {
+    display: none;
+  }
 `;
 
 export const NavItems = styled.ul`
@@ -36,6 +41,10 @@ export const NavItems = styled.ul`
         font-weight: 600;
       }
     }
+
+    @media (max-width: 1085px) {
+      display: none;
+    }
   }
 `;
 
@@ -44,21 +53,56 @@ export const NavSearchDiv = styled.div`
   align-items: center;
   justify-content: center;
   gap: 30px;
+  width: 100%;
+
+  @media (max-width: 680px) {
+    width: 100% !important;
+    gap: 0;
+  }
+`;
+
+export const SearchInputMedia = styled.div`
+  display: flex;
+  position: relative;
+  display: none;
+
+  @media (max-width: 680px) {
+    display: block;
+    width: 95%;
+  }
+`;
+
+export const SearchIconMedia = styled.div`
+  position: absolute;
+  top: 30px;
+  left: 15px;
 `;
 
 export const SearchIconDiv = styled.div`
   width: 263px;
+
+  @media (max-width: 680px) {
+    width: 0;
+  }
 `;
 
 export const SearchIcon = styled.div`
   float: right;
   cursor: pointer;
+
+  @media (max-width: 680px) {
+    display: none;
+  }
 `;
 
 export const SearchInput = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
+
+  @media (max-width: 680px) {
+    display: none;
+  }
 `;
 
 export const SearchCancelIcon = styled.div`
@@ -77,6 +121,10 @@ export const Busket = styled.div`
   position: relative;
   display: flex;
   cursor: pointer;
+
+  @media (max-width: 680px) {
+    display: none;
+  }
 `;
 
 export const CountOfNav = styled.div`
@@ -94,6 +142,19 @@ export const CountOfNav = styled.div`
   color: white;
 `;
 
+export const FilterButton = styled.div`
+  display: none;
+
+  @media (max-width: 680px) {
+    display: block !important;
+  }
+`;
+
+export const LoginBtn = styled.div`
+  @media (max-width: 680px) {
+    display: none;
+  }
+`;
 //  =====================================================================
 // Footer style
 //  =====================================================================
@@ -105,6 +166,26 @@ export const FooterRow = styled.div`
   grid-template-columns: auto auto auto auto;
   background-color: #fbfbfb;
   padding: 30px 25px;
+
+  @media (max-width: 1200px) {
+    gap: 50px;
+  }
+
+  @media (max-width: 1000px) {
+    gap: 10px;
+    padding: 20px 20px 20px 50px;
+    grid-template-columns: auto auto;
+  }
+
+  @media (max-width: 660px) {
+    gap: 10px;
+    padding: 20px 0 20px 50px;
+    grid-template-columns: auto;
+  }
+
+  @media (max-width: 440px) {
+    padding: 30px 0;
+  }
 `;
 
 export const FooterRow2 = styled.div`
@@ -116,6 +197,19 @@ export const FooterRow2 = styled.div`
   ul {
     display: grid;
     grid-template-columns: auto auto auto auto;
+
+    @media (max-width: 1000px) {
+      gap: 10px;
+      padding: 20px 0 20px 25px;
+      grid-template-columns: auto auto;
+      text-align: left;
+    }
+
+    @media (max-width: 660px) {
+      gap: 10px;
+      padding: 20px 0 20px 25px;
+      grid-template-columns: auto;
+    }
   }
 
   ul li {
@@ -125,6 +219,15 @@ export const FooterRow2 = styled.div`
     justify-content: center;
     gap: 10px;
     cursor: pointer;
+
+    @media (max-width: 1000px) {
+      text-align: left;
+      justify-content: initial;
+    }
+
+    @media (max-width: 660px) {
+      margin: 0 auto;
+    }
   }
 `;
 
@@ -163,6 +266,15 @@ export const FooterRowCol = styled.div`
     line-height: 22px;
     color: #727272;
   }
+
+  @media (max-width: 800px) {
+    padding: 20px;
+  }
+
+  @media (max-width: 660px) {
+    margin: 0 auto;
+    width: 300px;
+  }
 `;
 
 export const FooterRowCol2 = styled.div`
@@ -183,6 +295,11 @@ export const FooterRowCol2 = styled.div`
     font-size: 14px;
     line-height: 22px;
     color: #727272;
+  }
+  @media (max-width: 800px) {
+    max-width: initial;
+    margin-top: 50px;
+    padding: 0 20px;
   }
 `;
 
@@ -216,6 +333,11 @@ export const Logo = styled.div`
   img {
     cursor: pointer;
   }
+
+  @media (max-width: 660px) {
+    margin: 0 auto;
+    width: 250px;
+  }
 `;
 
 export const FooterRowWrap = styled.div`
@@ -247,6 +369,11 @@ export const FooterRowWrap = styled.div`
 
   img {
     margin-top: 20px;
+  }
+
+  @media (max-width: 660px) {
+    margin: 0 auto;
+    width: 140px;
   }
 `;
 

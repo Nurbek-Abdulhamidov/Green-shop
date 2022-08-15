@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LogoImg from "../assets/images/Logo.svg";
+import { VscCircuitBoard } from "react-icons/vsc";
 import { NavLink } from "react-router-dom";
 import { navLinksData } from "../data/navData/navData";
 import BusketImg from "../assets/images/busket.svg";
@@ -9,6 +10,8 @@ import { GiCancel } from "react-icons/gi";
 import {
   Busket,
   CountOfNav,
+  FilterButton,
+  LoginBtn,
   Nav,
   NavbarContainer,
   NavItems,
@@ -17,7 +20,9 @@ import {
   SearchCancelIcon,
   SearchIcon,
   SearchIconDiv,
+  SearchIconMedia,
   SearchInput,
+  SearchInputMedia,
 } from "./style";
 import { MainContainer } from "../GlobalStyle/style";
 import Button from "../components/Button/Button";
@@ -51,24 +56,39 @@ const Navbar = () => {
                   <FiSearch />
                 </SearchIcon>
               ) : (
-                <SearchInput>
-                  <Input placeholder="Find your plants" />
-                  <SearchCancelIcon onClick={OpenSearch}>
-                    <GiCancel />
-                  </SearchCancelIcon>
-                </SearchInput>
+                <>
+                  <SearchInput>
+                    <Input placeholder="Find your plants" />
+                    <SearchCancelIcon onClick={OpenSearch}>
+                      <GiCancel />
+                    </SearchCancelIcon>
+                  </SearchInput>
+                </>
               )}
             </SearchIconDiv>
+            <SearchInputMedia>
+              <Input height="45px" placeholder=" Find your plants" />
+              <SearchIconMedia onClick={OpenSearch}>
+                <FiSearch />
+              </SearchIconMedia>
+            </SearchInputMedia>
             <Busket>
               <img src={BusketImg} alt="" />
               <CountOfNav>
                 <span>4</span>
               </CountOfNav>
             </Busket>
-            <Button>
-              <HiOutlineLogout /> Login
-            </Button>
+            <LoginBtn>
+              <Button>
+                <HiOutlineLogout /> Login
+              </Button>
+            </LoginBtn>
           </NavSearchDiv>
+          <FilterButton>
+            <Button height="45px">
+              <VscCircuitBoard />
+            </Button>
+          </FilterButton>
         </NavbarContainer>
       </MainContainer>
     </Nav>

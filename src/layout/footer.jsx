@@ -53,21 +53,6 @@ const Footer = () => {
     },
   ];
 
-  const secondRowdata = [
-    {
-      icon: <HiOutlineLocationMarker />,
-      paragraph: "70 West Buckingham Ave.Farmingdale, NY 11735",
-    },
-    {
-      icon: <TbMail />,
-      paragraph: "contact@greenshop.com",
-    },
-    {
-      icon: <TbPhoneCall />,
-      paragraph: "+88 01911 717 490",
-    },
-  ];
-
   return (
     <MainContainer>
       <footer>
