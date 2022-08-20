@@ -9,9 +9,9 @@ export const InputDiv = styled.div`
 
 export const MainInput = styled.input`
   outline: none;
-  border: none;
+  border: 1px solid #dee1e6;
   padding: 4px 10px;
-  background: #f8f8f8;
+  background: #f3f3f3;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
   border-radius: 6px;
   height: ${({ height }) => (height ? height : "45px")};
@@ -38,7 +38,7 @@ export const EmaiInput = styled.input`
   padding: 10px;
   background: #ffffff;
   border-radius: 6px;
-  width: ${({ width }) => (width ? width : "")};
+  width: ${({ width }) => (width ? width : "400px")};
   -webkit-box-shadow: 10px 10px 45px 19px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 10px 10px 45px 19px rgba(34, 60, 80, 0.2);
   box-shadow: 10px 10px 45px 19px rgba(34, 60, 80, 0.2);

@@ -21,13 +21,27 @@ export const BlogContainer = styled.div`
 `;
 
 export const BlogCardWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+
+  @media (max-width: 1120px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: auto;
+  }
 `;
 
 export const BlogCard = styled.div`
   max-width: 268px;
   background: #fbfbfb;
+
+  @media (max-width: 1300px) {
+    margin: 20px auto;
+  }
 `;
 
 export const BlogTextWrap = styled.div`

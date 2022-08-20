@@ -17,6 +17,14 @@ export const BtnDiv = styled.button`
     transform: scale(0.9s);
     transition: all 0.3s ease;
   }
+  @media (max-width:720px) {
+    height: 40px;
+    font-size:16px ;
+  }
+  @media (max-width:420px) {
+    height: 32px;
+    font-size:13px ;
+  }
 `;
 
 export const ButtonEmail = styled.button`

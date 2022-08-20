@@ -14,6 +14,7 @@ import {
   LoginBtn,
   Nav,
   NavbarContainer,
+  NavbarWrapper,
   NavItems,
   NavLogo,
   NavSearchDiv,
@@ -50,6 +51,7 @@ const Navbar = () => {
                 </li>
               ))}
             </NavItems>
+            <NavbarWrapper>
             <SearchIconDiv>
               {search ? (
                 <SearchIcon onClick={OpenSearch}>
@@ -83,6 +85,7 @@ const Navbar = () => {
                 <HiOutlineLogout /> Login
               </Button>
             </LoginBtn>
+            </NavbarWrapper>
           </NavSearchDiv>
           <FilterButton>
             <Button height="45px">

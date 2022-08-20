@@ -19,9 +19,32 @@ export const CategoryDiv = styled.div`
     line-height: 16px;
     color: #3d3d3d;
   }
+  @media (max-width: 935px) {
+    margin: 0 25px;
+  }
+  @media (max-width: 660px) {
+    margin: 0 20px;
+  }
+  @media (max-width: 560px) {
+    display: none;
+  }
 `;
 
-export const CategoryImage = styled.div``;
+export const CategoryImage = styled.div`
+  @media (max-width: 935px) {
+    img {
+      width: 305px;
+    }
+  }
+  @media (max-width: 660px) {
+    img {
+      width: 250px;
+    }
+  }
+  @media (max-width: 875px) {
+    display: none;
+  }
+`;
 
 export const CategoryItems = styled.ul`
   list-style-type: none;
@@ -134,17 +157,40 @@ export const ProductSort = styled.div`
     line-height: 16px;
     color: #3d3d3d;
   }
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const CategoryOfProduct = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
+  @media (max-width: 1200px) {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 `;
 
 export const ProductImage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 585px) {
+    img {
+      max-width: 150px;
+    }
+  }
+  @media (max-width: 430px) {
+    img {
+      max-width: 120px;
+    }
+  }
+  @media (max-width: 390px) {
+    img {
+      max-width: 110px;
+    }
+  }
 `;
 
 export const ProductCard = styled.div`
@@ -159,6 +205,20 @@ export const ProductCard = styled.div`
     line-height: 16px;
     color: #3d3d3d;
     margin: 0 0 10px 0;
+  }
+
+  @media (max-width: 875px) {
+    margin: 10px auto;
+    border-radius: 25px;
+  }
+
+  @media (max-width: 585px) {
+    max-width: 240px;
+  }
+  @media (max-width: 430px) {
+    p {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -181,6 +241,16 @@ export const ProductDiscount = styled.div`
     line-height: 16px;
     color: #a5a5a5;
   }
+  @media (max-width: 390px) {
+    font-size: 14px;
+
+    span {
+      font-size: 14px;
+    }
+    .overLine {
+      font-size: 14px;
+    }
+  }
 `;
 
 export const ProductIcons = styled.div`
@@ -194,5 +264,11 @@ export const ProductIcons = styled.div`
   span:hover {
     color: #46a358;
     cursor: pointer;
+  }
+  @media (max-width: 430px) {
+    font-size: 16px;
+  }
+  @media (max-width: 390px) {
+    font-size: 14px;
   }
 `;

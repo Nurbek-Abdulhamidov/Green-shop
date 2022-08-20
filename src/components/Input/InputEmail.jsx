@@ -7,7 +7,7 @@ const Input = ({ placeholder }) => {
     <InputDiv>
       <EmaiInput width="400px" placeholder={placeholder} />
       <ButtonInput>
-        <ButtonEmail>join</ButtonEmail>
+        {/* <ButtonEmail>join</ButtonEmail> */}
       </ButtonInput>
     </InputDiv>
   );

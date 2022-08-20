@@ -1,11 +1,7 @@
 import React from "react";
 import SaleImg from "../../assets/images/SaleBanner.svg";
 import Button from "../Button/Button.jsx";
-import imgOfProduct from "../../assets/images/product1.png";
-import imgOfProduct1 from "../../assets/images/headerCard.png";
-import imgOfProduct2 from "../../assets/images/headerCard2.png";
-import imgOfProduct3 from "../../assets/images/product3.png";
-import imgOfProduct4 from "../../assets/images/product4.png";
+
 import { FaRegHeart } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import { RiShoppingCart2Line } from "react-icons/ri";
@@ -32,19 +28,14 @@ import {
   SizeUl,
   SliderPrice,
 } from "./style";
+import { useState } from "react";
+import { items, products } from "../../data/Mock/data";
 
 const Category = () => {
-  const items = [
-    { id: 1, item: "House Plants", count: 33 },
-    { id: 2, item: "Potter Plants", count: 12 },
-    { id: 3, item: "Seeds", count: 65 },
-    { id: 4, item: "Small Plants", count: 39 },
-    { id: 5, item: "Big Plants", count: 23 },
-    { id: 6, item: "Succulents", count: 17 },
-    { id: 7, item: "Trerrariums", count: 19 },
-    { id: 8, item: "Gardening", count: 13 },
-    { id: 9, item: "Accessories", count: 18 },
-  ];
+  const [item, setItem] = useState(items);
+  const [active, setActive] = useState(false);
+  const [product, setProduct] = useState(products);
+  const [filteredData, setFilteredData] = useState();
 
   const sizes = [
     { id: 1, size: "Small", amount: 119 },
@@ -53,81 +44,35 @@ const Category = () => {
   ];
 
   const contents = [
-    { id: 1, item: "All Plants" },
-    { id: 2, item: "New Arrivals" },
-    { id: 3, item: "Sale" },
+    { id: 1, status: "all", item: "All Plants" },
+    { id: 2, status: "new", item: "New Arrivals" },
+    { id: 3, status: "sale", item: "Sale" },
   ];
 
-  const products = [
-    {
-      id: 1,
-      productImg: imgOfProduct,
-      product: "Barberton Daisy",
-      price: 199,
-    },
-    {
-      id: 2,
-      productImg: imgOfProduct1,
-      product: "Barberton Daisy",
-      price: 199,
-    },
-    {
-      id: 3,
-      productImg: imgOfProduct2,
-      product: "Barberton Daisy",
-      price: 199,
-      discount: 229000,
-    },
-    {
-      id: 4,
-      productImg: imgOfProduct3,
-      product: "Barberton Daisy",
-      price: 199,
-      discount: 229000,
-    },
-    {
-      id: 5,
-      productImg: imgOfProduct4,
-      product: "Barberton Daisy",
-      price: 199,
-    },
-    {
-      id: 6,
-      productImg: imgOfProduct,
-      product: "Barberton Daisy",
-      price: 199,
-    },
-    {
-      id: 7,
-      productImg: imgOfProduct,
-      product: "Barberton Daisy",
-      price: 199,
-      discount: 229000,
-    },
-    {
-      id: 8,
-      productImg: imgOfProduct,
-      product: "Barberton Daisy",
-      price: 199,
-    },
-    {
-      id: 9,
-      productImg: imgOfProduct1,
-      product: "Barberton Daisy",
-      price: 199,
-    },
-  ];
+  // const activeItem = (value) => {
+  //   let active = items.filter((val) => val.id === value.id);
+  //   setActive(true)
+  // };
 
-  console.log(products.productImg);
+  const getData = (value) => {
+    let filterData = products.filter((val) => val.category === value.category);
+    setProduct(filterData);
+  };
+
+  const filterProduct = (content) => {
+    let filterProduct = products.filter((val) => val.status === content.status);
+    setProduct(filterProduct);
+  };
+
   return (
     <CategoryWrapper>
       <CategoryImage>
         <CategoryDiv>
           <h6>Categories</h6>
           <CategoryItems>
-            {items.map((value, key) => (
-              <CategoryItem key={key}>
-                <ItemText>{value.item}</ItemText>
+            {item.map((value, key) => (
+              <CategoryItem key={key} onClick={() => getData(value)}>
+                <ItemText>{value.productName}</ItemText>
                 <ItemCount>( {value.count} )</ItemCount>
               </CategoryItem>
             ))}
@@ -156,7 +101,9 @@ const Category = () => {
         <ProductLists>
           <ProductItems>
             {contents.map((content, key) => (
-              <ProductItem key={key}>{content.item}</ProductItem>
+              <ProductItem key={key} onClick={() => filterProduct(content)}>
+                {content.item}
+              </ProductItem>
             ))}
           </ProductItems>
           <ProductSort>
@@ -169,7 +116,7 @@ const Category = () => {
           </ProductSort>
         </ProductLists>
         <CategoryOfProduct>
-          {products.map((value, key) => (
+          {product.map((value, key) => (
             <ProductCard key={key}>
               <ProductImage>
                 <img src={value.productImg} alt="" />
@@ -185,7 +132,7 @@ const Category = () => {
                   <FiSearch />
                 </span>
               </ProductIcons>
-              <p>Barberton Daisy</p>
+              <p>{value.productName}</p>
               <ProductDiscount>
                 <span>{`$` + value.price}</span>
                 {value.discount > 0 ? (

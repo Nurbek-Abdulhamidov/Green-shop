@@ -11,6 +11,13 @@ export const NavbarContainer = styled.div`
 
 export const Nav = styled.nav``;
 
+export const NavbarWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap:20px ;
+  justify-content:space-between ;
+`;
+
 export const NavLogo = styled.div`
   cursor: pointer;
 
@@ -51,7 +58,7 @@ export const NavItems = styled.ul`
 export const NavSearchDiv = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   gap: 30px;
   width: 100%;
 

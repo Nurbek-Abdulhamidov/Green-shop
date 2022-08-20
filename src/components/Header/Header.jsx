@@ -24,6 +24,7 @@ const Header = () => {
     autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
     appendDots: (dots) => (
       <div
         style={{
@@ -47,28 +48,6 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Slider {...settings}>
-        <HeaderContainer>
-          <LeftHeader>
-            <h5>Welcome to GreenShop</h5>
-            <h1>
-              Let’s Make a Better <span>Planet</span>
-            </h1>
-            <p>
-              We are an online plant shop offering a wide range of cheap and
-              trendy plants. Use our plants to create an unique Urban Jungle.
-              Order your favorite plants!
-            </p>
-            <Button>SHOP NOW</Button>
-          </LeftHeader>
-          <RightHeader>
-            <HeaderRightImage>
-              <img src={BigImg} alt="" />
-            </HeaderRightImage>
-            <SmallHeaderImgDiv>
-              <img src={SmallHeaderImg} alt="" />
-            </SmallHeaderImgDiv>
-          </RightHeader>
-        </HeaderContainer>
         <HeaderContainer>
           <LeftHeader>
             <h5>Welcome to GreenShop</h5>
