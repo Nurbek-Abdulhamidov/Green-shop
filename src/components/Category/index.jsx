@@ -57,6 +57,7 @@ const Category = () => {
   const getData = (value) => {
     let filterData = products.filter((val) => val.category === value.category);
     setProduct(filterData);
+    console.log(filterData);
   };
 
   const filterProduct = (content) => {

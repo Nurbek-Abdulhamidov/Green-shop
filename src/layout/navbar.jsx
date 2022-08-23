@@ -45,7 +45,7 @@ const Navbar = () => {
           </NavLogo>
           <NavSearchDiv>
             <NavItems>
-              {navLinksData.map(({ key, path, title, active }) => (
+              {navLinksData.map(({ key, path, title }) => (
                 <li key={key}>
                   <NavLink to={path}>{title}</NavLink>
                 </li>
