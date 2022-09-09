@@ -1,10 +1,12 @@
-import React from 'react'
-import { BtnDiv } from './ButtonStyle'
+import React from "react";
+import { BtnDiv } from "./ButtonStyle";
 
-const Button = ({children}) => {
+const Button = ({ children, bgColor, color, font }) => {
   return (
-    <BtnDiv>{children}</BtnDiv>
-  )
-}
+    <BtnDiv bgColor={bgColor} color={color} font={font}>
+      {children}
+    </BtnDiv>
+  );
+};
 
-export default Button
+export default Button;

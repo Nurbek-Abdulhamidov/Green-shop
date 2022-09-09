@@ -6,6 +6,8 @@ export const Container = styled.div`
   margin: 20px 0;
 `;
 
+export const Wrapper = styled.div``;
+
 export const LeftSide = styled.div`
   display: flex;
   flex: 5;
@@ -124,11 +126,101 @@ export const Sizes = styled.div`
 
     :hover {
       border: 1px solid #46a358;
-      
+
       span {
         color: #46a358;
         font-weight: 700;
       }
     }
+  }
+`;
+
+export const AddCart = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  p {
+    margin: 0 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 10px;
+    color: #3d3d3d;
+  }
+`;
+
+export const CounterButton = styled.button`
+  width: 33px;
+  height: 38px;
+  background: linear-gradient(180deg, #46a358 0%, rgba(70, 163, 88, 0.8) 100%);
+  border-radius: 29px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+`;
+
+export const Tags = styled.div`
+  margin-top: 20px;
+  p {
+    color: rgba(114, 114, 114, 1);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+
+    span {
+      color: rgba(165, 165, 165, 1);
+    }
+  }
+
+  h6 {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+
+    i {
+      cursor: pointer;
+      font-size: 17px;
+
+      :hover {
+        transition: all 0.3s ease;
+        -webkit-box-shadow: 0px 10px 2px 2px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 10px 2px 2px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 10px 2px 2px rgba(34, 60, 80, 0.2);
+        border-radius: 20%;
+      }
+    }
+  }
+`;
+
+export const DescriptionProductContainer = styled.div``;
+
+export const DescriptionProduct = styled.div`
+  display: flex;
+  gap: 50px;
+  border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+  margin-bottom: 18px;
+
+  p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 16px;
+    color: #3d3d3d;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+`;
+
+export const Review = styled.div`
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #727272;
+    margin-bottom: 18px;
+  }
+  b {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #3d3d3d;
   }
 `;
