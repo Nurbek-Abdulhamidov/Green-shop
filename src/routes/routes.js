@@ -6,6 +6,7 @@ const Shop = lazy(() => import("../pages/Shop/Shop.jsx"));
 const ProductCart = lazy(() => import("../pages/ProductCart/index.jsx"));
 const PlantCare = lazy(() => import("../pages/PlanntCare/index.jsx"));
 const Blogs = lazy(() => import("../pages/Blogs/index.jsx"));
+const ProductView = lazy(() => import("../pages/ProductView/index.jsx"));
 const MyAccount = lazy(() => import("../pages/MyAccount/index.jsx"));
 
 const AccountDetails = lazy(() =>
@@ -22,6 +23,7 @@ export const routes = [
   { path: "/plantCare", element: <PlantCare /> },
   { path: "/blogs", element: <Blogs /> },
   { path: "/myAccount", element: <MyAccount /> },
+  { path: "/productView", element: <ProductView /> },
   { path: "*", element: <NotFound /> },
 ];
 

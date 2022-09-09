@@ -9,7 +9,7 @@ import Address from "../../components/Address";
 import Wishlist from "../../components/Wishlist";
 import AccountDetails from "../../components/AccountDetails";
 import { NavLink } from "react-router-dom";
-  import Account from "../../Account";
+import Account from "../../Account";
 
 const MyAccount = () => {
   const sideBarData = [
@@ -54,7 +54,7 @@ const MyAccount = () => {
         <h2>My Account</h2>
         {data.map(({ path, id, item, icon }, key) => (
           <ul key={key}>
-            <NavLink to={path}>
+            <NavLink to={path} style={{}}>
               <li>
                 <span>{icon}</span> {item}
               </li>
