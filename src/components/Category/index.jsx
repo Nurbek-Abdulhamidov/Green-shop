@@ -30,12 +30,11 @@ import {
 } from "./style";
 import { useState } from "react";
 import { items, products } from "../../data/Mock/data";
+import { NavLink } from "react-router-dom";
 
 const Category = () => {
   const [item, setItem] = useState(items);
-  const [active, setActive] = useState(false);
   const [product, setProduct] = useState(products);
-  const [filteredData, setFilteredData] = useState();
 
   const sizes = [
     { id: 1, size: "Small", amount: 119 },
@@ -48,11 +47,6 @@ const Category = () => {
     { id: 2, status: "new", item: "New Arrivals" },
     { id: 3, status: "sale", item: "Sale" },
   ];
-
-  // const activeItem = (value) => {
-  //   let active = items.filter((val) => val.id === value.id);
-  //   setActive(true)
-  // };
 
   const getData = (value) => {
     let filterData = products.filter((val) => val.category === value.category);
@@ -119,9 +113,12 @@ const Category = () => {
         <CategoryOfProduct>
           {product.map((value, key) => (
             <ProductCard key={key}>
-              <ProductImage>
-                <img src={value.productImg} alt="" />
-              </ProductImage>
+              <NavLink to="/productView">
+                <ProductImage>
+                  <img src={value.productImg} alt="" />
+                </ProductImage>
+              </NavLink>
+
               <ProductIcons>
                 <span>
                   <RiShoppingCart2Line />

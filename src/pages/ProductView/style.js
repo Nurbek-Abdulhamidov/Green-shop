@@ -224,3 +224,16 @@ export const Review = styled.div`
     color: #3d3d3d;
   }
 `;
+
+export const Releted = styled.div`
+  margin: 50px 0 30px 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  color: #46a358;
+  border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
+
+  p {
+    margin-bottom:10px ;
+  }
+`;
