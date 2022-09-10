@@ -310,9 +310,6 @@ export const FooterRowCol2 = styled.div`
   }
 `;
 
-export const InputWrapper = styled.div`
-  display: flex;
-`;
 
 export const ItemIcon = styled.div`
   margin-top: 5px;

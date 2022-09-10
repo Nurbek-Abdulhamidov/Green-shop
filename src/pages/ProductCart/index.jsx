@@ -6,12 +6,19 @@ import {
   Container,
   LeftSide,
   Price,
+  PriceDiv,
   Product,
   Quantity,
   RightSide,
+  SubTotal,
+  TitleWrapper,
   Total,
+  TotalPrice,
 } from "./style";
 import { useState } from "react";
+import Input from "../../components/Input/InputEmail";
+import ButtonPrice from "../../components/Button/ButtonPrice";
+import Loading from "../../components/Loading/Loading";
 
 const ProductCart = () => {
   const products = [
@@ -74,7 +81,7 @@ const ProductCart = () => {
             </thead>
             {data.map((product, index) => (
               <tbody key={index}>
-                <br />
+                <br></br>
                 <tr style={{ marginTop: "50px" }}>
                   <td>
                     <Product>
@@ -116,7 +123,36 @@ const ProductCart = () => {
           </table>
         </LeftSide>
         <RightSide>
-          
+          <TitleWrapper>
+            <h3>Cart Totals</h3>
+          </TitleWrapper>
+          <p>Coupon Apply</p>
+          <Input placeholder="Enter coupon code here..." title="Apply" />
+          <SubTotal>
+            <PriceDiv>
+              <p>Subtotal</p>
+              <span>$2,683.00</span>
+            </PriceDiv>
+            <PriceDiv>
+              <p>Coupon Discount</p>
+              <span>(-) 00.00</span>
+            </PriceDiv>
+            <PriceDiv>
+              <p>Shiping</p>
+              <span>$16.00</span>
+            </PriceDiv>
+            <PriceDiv>
+              <p></p>
+              <p>View shipping charge</p>
+            </PriceDiv>
+            <TotalPrice>
+              <h6>Total</h6>
+              <h5>$2,699.00</h5>
+            </TotalPrice>
+            <Loading/>
+            <ButtonPrice>Proceed To Checkout</ButtonPrice>
+            <ButtonPrice bg="white" color="#46a358">Continue Shopping</ButtonPrice>
+          </SubTotal>
         </RightSide>
       </Container>
       <Carusel />

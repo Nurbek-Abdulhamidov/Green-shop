@@ -9,7 +9,6 @@ import {
   FooterRowCol,
   FooterRowCol2,
   FooterRowWrap,
-  InputWrapper,
   ItemIcon,
   ItemText,
   Logo,
@@ -21,7 +20,6 @@ import footerImg1 from "../assets/images/footercard1.svg";
 import footerImg2 from "../assets/images/footercard2.svg";
 import LogoImg from "../assets/images/Logo.svg";
 import PlasticCard from "../assets/images/footerCard.svg";
-import InputEmail from "../components/Input/InputEmail";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import {
   AiFillInstagram,
@@ -30,6 +28,8 @@ import {
 } from "react-icons/ai";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { TbMail, TbPhoneCall } from "react-icons/tb";
+import Input from "../components/Input/InputEmail";
+import { InputDiv } from "../components/Input/InputStyle";
 
 const Footer = () => {
   const firstRowData = [
@@ -70,9 +70,9 @@ const Footer = () => {
             ))}
             <FooterRowCol2>
               <h5>Would you like to join newsletters?</h5>
-              <InputWrapper>
-                <InputEmail placeholder="enter your email address..." />
-              </InputWrapper>
+              <InputDiv>
+                <Input title="join" placeholder="enter your email address..." />
+              </InputDiv>
               <p>
                 We usually post offers and challenges in newsletter. We’re your
                 online houseplant destination. We offer a wide range of

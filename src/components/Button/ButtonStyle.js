@@ -34,28 +34,48 @@ export const BtnDiv = styled.button`
   }
 `;
 
-export const ButtonEmail = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  border: none;
-  height: 100%;
-  width: 85px;
-  color: #fff;
-  cursor: pointer;
-  background: #46a358;
-  border-bottom-right-radius: 6px;
-  border-top-right-radius: 6px;
-  :active {
-    transform: scale(0.9s);
-    transition: all 0.3s ease;
-  }
-`;
+// export const ButtonEmail = styled.button`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 5px;
+//   border: none;
+//   height: 100%;
+//   width: 85px;
+//   color: #fff;
+//   cursor: pointer;
+//   background: #46a358;
+//   border-bottom-right-radius: 6px;
+//   border-top-right-radius: 6px;
+// :active {
+//   transform: scale(0.9s);
+//   transition: all 0.3s ease;
+// }
+// `;
 
 export const ButtonInput = styled.div`
   position: absolute;
   top: 0;
   right: 0px;
   height: 100%;
+`;
+
+export const ButtonWrap = styled.button`
+  width: 100%;
+  background: ${({ bg }) => (bg ? bg : "#46a358")};
+  color: ${({ color }) => (color ? color : "#fff")};
+  border-radius: 3px;
+  height: 40px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin:8px 0 ;
+
+  :active {
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+  }
 `;

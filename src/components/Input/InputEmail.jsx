@@ -1,14 +1,11 @@
 import React from "react";
-import { ButtonEmail, ButtonInput } from "../Button/ButtonStyle";
-import { EmaiInput, InputDiv, MainInput } from "./InputStyle";
+import { InputComp, InputDiv, Button } from "./InputStyle";
 
-const Input = ({ placeholder }) => {
+const Input = ({ placeholder, title }) => {
   return (
     <InputDiv>
-      <EmaiInput width="400px" placeholder={placeholder} />
-      <ButtonInput>
-        {/* <ButtonEmail>join</ButtonEmail> */}
-      </ButtonInput>
+      <InputComp placeholder={placeholder} />
+      <Button>{title}</Button>
     </InputDiv>
   );
 };
