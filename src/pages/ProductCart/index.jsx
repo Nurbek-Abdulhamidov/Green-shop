@@ -18,9 +18,13 @@ import {
 import { useState } from "react";
 import Input from "../../components/Input/InputEmail";
 import ButtonPrice from "../../components/Button/ButtonPrice";
-import Loading from "../../components/Loading/Loading";
+import { useLocation } from "react-router-dom";
 
 const ProductCart = () => {
+  const location = useLocation();
+  const query = new URLSearchParams(location.search);
+  console.log(query.get('status'));
+
   const products = [
     {
       id: 1,
@@ -134,7 +138,7 @@ const ProductCart = () => {
               <span>$2,683.00</span>
             </PriceDiv>
             <PriceDiv>
-              <p>Coupon Discount</p>
+              <p>Coupon Discounts</p>
               <span>(-) 00.00</span>
             </PriceDiv>
             <PriceDiv>
@@ -149,9 +153,10 @@ const ProductCart = () => {
               <h6>Total</h6>
               <h5>$2,699.00</h5>
             </TotalPrice>
-            <Loading/>
             <ButtonPrice>Proceed To Checkout</ButtonPrice>
-            <ButtonPrice bg="white" color="#46a358">Continue Shopping</ButtonPrice>
+            <ButtonPrice bg="white" color="#46a358">
+              Continue Shopping
+            </ButtonPrice>
           </SubTotal>
         </RightSide>
       </Container>
